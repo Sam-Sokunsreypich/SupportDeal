@@ -6,7 +6,7 @@ import AboutUs from './components/pages/aboutUs/AboutUs.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async';
 import RootLayout from './components/layouts/RootLayout.jsx'
-import Shops from './components/pages/shops/shops.jsx'
+import Shops from './components/pages/shops/Shops.jsx'
 import Deal from './components/pages/deal/Deal.jsx'
 const router = createBrowserRouter([
   {
