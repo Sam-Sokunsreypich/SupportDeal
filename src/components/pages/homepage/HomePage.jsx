@@ -121,7 +121,7 @@ export default function Homepage(){
    <section className="w-full pb-10 px-10 md:pb-16 md:px-16 lg:px-20 lg:pb-20">
       <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Buy one <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">Get one</span></h2>
       <div >
-        <img className="w-[100%] h-[80vh] p-5 md:p-10" src="/src/assets/ad_img2.jpg" alt="banner b1g1" />
+        <img className="w-[100%] h-[80vh] p-5 md:p-10" src="/public/assets/ad_img2.jpg" alt="banner b1g1" />
       </div>
        {/* card */}
        <div className="md:px-8 my-5 lg:p-0 gap-10">

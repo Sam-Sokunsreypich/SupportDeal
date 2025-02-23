@@ -11,7 +11,7 @@ export default function FooterComponent() {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
               <Link to="/" className="flex items-center">
-                  <img src="/src/assets/logo.png" className="h-10 rounded-full me-3" alt="FlowBite Logo" />
+                  <img src="/public/assets/logo.png" className="h-10 rounded-full me-3" alt="FlowBite Logo" />
                   <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SupportDeal</span>
               </Link>
           </div>

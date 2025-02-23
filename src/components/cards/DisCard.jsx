@@ -9,14 +9,14 @@ import { Link } from "react-router-dom";
 
 export default function DisCard() {
   // const disCard = [
-  // {id: 1, image:"/src/assets/20off/Camera.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 2, image:"/src/assets/20off/chiken_burger.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 3, image:"/src/assets/20off/shirt.avif",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 4, image:"/src/assets/20off/IUNIK_Centella_Calming_Daily_Screen.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 5, image:"/src/assets/20off/Macbook_Air_M2.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 6, image:"/src/assets/20off/i-watch.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 7, image:"/src/assets/20off/T-shirt-1.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 8, image:"/src/assets/20off/set_oil_skin.webp",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"}
+  // {id: 1, image:"/public/assets/20off/Camera.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+  // {id: 2, image:"/public/assets/20off/chiken_burger.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+  // {id: 3, image:"/public/assets/20off/shirt.avif",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+  // {id: 4, image:"/public/assets/20off/IUNIK_Centella_Calming_Daily_Screen.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+  // {id: 5, image:"/public/assets/20off/Macbook_Air_M2.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+  // {id: 6, image:"/public/assets/20off/i-watch.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+  // {id: 7, image:"/public/assets/20off/T-shirt-1.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+  // {id: 8, image:"/public/assets/20off/set_oil_skin.webp",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"}
 
   // ]
   const dis_20_off = getAllProduct().filter(
