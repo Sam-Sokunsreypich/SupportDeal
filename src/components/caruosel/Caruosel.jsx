@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import img1 from '/public/assets/img1.jpg';
-import img2 from '/public/assets/ad_img2.jpg';
+import img1 from '/assets/img1.jpg';
+import img2 from '/assets/ad_img2.jpg';
 
 
 const images = ["https://marketplace.canva.com/EAFfT9NH-JU/1/0/1600w/canva-gray-minimalist-fashion-big-sale-banner-TvkdMwoxWP8.jpg","https://img.freepik.com/free-vector/electronics-store-facebook-cover-template_23-2151168350.jpg","https://www.ajantabottle.com/blog/wp-content/uploads/2024/07/cosmetic-banner.png"];

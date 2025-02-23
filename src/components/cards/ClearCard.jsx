@@ -8,14 +8,14 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
 export default function ClearCard() {
     // const clearCard =[
-    //     {id: 1, image:"/public/assets/clearance_sale/1g1_goodal_calming_Moisture_Suncream.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-    //   {id: 2, image:"/public/assets/clearance_sale/ear_head.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-    //   {id: 3, image:"/public/assets/clearance_sale/Goodal_Green_Tangerine_Vata_C_Dark_Spot.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-    //   {id: 4, image:"/public/assets/clearance_sale/grow_skin.webp",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-    //   {id: 5, image:"/public/assets/clearance_sale/JBL_headphones.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-    //   {id: 6, image:"/public/assets/clearance_sale/labtop.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-    //   {id: 7, image:"/public/assets/clearance_sale/T-shirt-1.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-    //   {id: 8, image:"/public/assets/clearance_sale/T-shirt-1.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"}
+    //     {id: 1, image:"/assets/clearance_sale/1g1_goodal_calming_Moisture_Suncream.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+    //   {id: 2, image:"/assets/clearance_sale/ear_head.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+    //   {id: 3, image:"/assets/clearance_sale/Goodal_Green_Tangerine_Vata_C_Dark_Spot.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+    //   {id: 4, image:"/assets/clearance_sale/grow_skin.webp",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+    //   {id: 5, image:"/assets/clearance_sale/JBL_headphones.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+    //   {id: 6, image:"/assets/clearance_sale/labtop.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+    //   {id: 7, image:"/assets/clearance_sale/T-shirt-1.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
+    //   {id: 8, image:"/assets/clearance_sale/T-shirt-1.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"}
      
     // ]
     const clearCard = getAllProduct()?.filter(products => products.type === "clearence sale") || [];

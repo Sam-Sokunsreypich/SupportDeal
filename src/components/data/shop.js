@@ -3,7 +3,7 @@ export function getAllShops (){
         {
             id: 1,
             name: "Bare Grow",
-            Image: "/public/assets/Shop/Bare_grow.jpg",
+            Image: "/assets/Shop/Bare_grow.jpg",
             type : "Skincare",
             phoneStore: "013892193",
             open: "8:00 AM",
@@ -13,7 +13,7 @@ export function getAllShops (){
         {
             id: 2,
             name: "Bingo",
-            Image: "/public/assets/Shop/Bingo.jpg",
+            Image: "/assets/Shop/Bingo.jpg",
             type : "Electronics",
             phoneStore: "013892193",
             open: "8:00 AM",
@@ -23,7 +23,7 @@ export function getAllShops (){
         {
             id: 3,
             name: "Burger Hourse",
-            Image: "/public/assets/Shop/burger_house.jpg",
+            Image: "/assets/Shop/burger_house.jpg",
             type : "Food",
             phoneStore: "013892193",
             open: "8:00 AM",
@@ -33,7 +33,7 @@ export function getAllShops (){
         {
             id: 4,
             name: "Nika Store",
-            Image: "/public/assets/Shop/nika_store.jpg",
+            Image: "/assets/Shop/nika_store.jpg",
             type : "Clothes",
             phoneStore: "013892193",
             open: "8:00 AM",
@@ -43,7 +43,7 @@ export function getAllShops (){
         {
             id: 5,
             name: "Delicious",
-            Image: "/public/assets/Shop/delicious.jpg",
+            Image: "/assets/Shop/delicious.jpg",
             type : "Food",
             phoneStore: "013892193",
             open: "8:00 AM",
@@ -53,7 +53,7 @@ export function getAllShops (){
         {
             id: 6,
             name: "Electronic Store",
-            Image: "/public/assets/Shop/Electronic_store.jpg",
+            Image: "/assets/Shop/Electronic_store.jpg",
             type : "Electronics",
             phoneStore: "013892193",
             open: "8:00 AM",
@@ -63,7 +63,7 @@ export function getAllShops (){
         {
             id: 7,
             name: "Mora Skincare",
-            Image: "/public/assets/Shop/Mora_skincare.jpg",
+            Image: "/assets/Shop/Mora_skincare.jpg",
             type : "Skincare",
             phoneStore: "013892193",
             open: "8:00 AM",
@@ -73,7 +73,7 @@ export function getAllShops (){
         {
             id: 8,
             name: "We Fashion",
-            Image: "/public/assets/Shop/WE_fashion.jpg",
+            Image: "/assets/Shop/WE_fashion.jpg",
             type : "Clothes",
             phoneStore: "013892193",
             open: "8:00 AM",

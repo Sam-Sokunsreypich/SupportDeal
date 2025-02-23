@@ -4,7 +4,7 @@ export default function getAllProduct() {
       id: 1,
       type:"clearence sale",
       image:
-        "/public/assets/clearance_sale/1g1_goodal_calming_Moisture_Suncream.jpg",
+        "/assets/clearance_sale/1g1_goodal_calming_Moisture_Suncream.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Bare Grow",
       expired_date: "2025-05-29",
@@ -14,7 +14,7 @@ export default function getAllProduct() {
     {
       id: 2,
       type:"clearence sale",
-      image: "/public/assets/clearance_sale/ear_head.jpg",
+      image: "/assets/clearance_sale/ear_head.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Bingo",
       expired_date: "2025-05-29",
@@ -25,7 +25,7 @@ export default function getAllProduct() {
       id: 3,
       type:"clearence sale",
       image:
-        "/public/assets/clearance_sale/Goodal_Green_Tangerine_Vata_C_Dark_Spot.jpg",
+        "/assets/clearance_sale/Goodal_Green_Tangerine_Vata_C_Dark_Spot.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Bare Grow",
       expired_date: "2025-05-29",
@@ -35,7 +35,7 @@ export default function getAllProduct() {
     {
       id: 4,
       type:"clearence sale",
-      image: "/public/assets/clearance_sale/grow_skin.webp",
+      image: "/assets/clearance_sale/grow_skin.webp",
       title: "Eden Mens oversize T Shirt ",
       shop: "Mora Skincare",
       expired_date: "2025-05-29",
@@ -45,7 +45,7 @@ export default function getAllProduct() {
     {
       id: 5,
       type:"clearence sale",
-      image: "/public/assets/clearance_sale/JBL_headphones.jpg",
+      image: "/assets/clearance_sale/JBL_headphones.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Electronic Store",
       expired_date: "2025-05-29",
@@ -55,7 +55,7 @@ export default function getAllProduct() {
     {
       id: 6,
       type:"clearence sale",
-      image: "/public/assets/clearance_sale/labtop.jpg",
+      image: "/assets/clearance_sale/labtop.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Bingo",
       expired_date: "2025-05-29",
@@ -65,7 +65,7 @@ export default function getAllProduct() {
     {
       id: 7,
       type:"clearence sale",
-      image: "/public/assets/clearance_sale/coat.png",
+      image: "/assets/clearance_sale/coat.png",
       title: "Eden Mens oversize T Shirt ",
       shop: "We Fashion.jpg",
       expired_date: "2025-05-29",
@@ -75,7 +75,7 @@ export default function getAllProduct() {
     {
       id: 8,
       type:"clearence sale",
-      image: "/public/assets/clearance_sale/suit.png",
+      image: "/assets/clearance_sale/suit.png",
       title: "Eden Mens oversize T Shirt ",
       shop: "Nika Store",
       expired_date: "2025-05-29",
@@ -85,7 +85,7 @@ export default function getAllProduct() {
     {
       id: 9,
       type:"20off",
-        image: "/public/assets/20off/Camera.jpg",
+        image: "/assets/20off/Camera.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Bingo",
       expired_date: "2025-05-29",
@@ -95,7 +95,7 @@ export default function getAllProduct() {
     {
       id: 10,
       type:"20off",
-      image: "/public/assets/20off/chiken_burger.jpg",
+      image: "/assets/20off/chiken_burger.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Burger Hourse",
       expired_date: "2025-05-29",
@@ -105,7 +105,7 @@ export default function getAllProduct() {
     {
       id: 11,
       type:"20off",
-      image: "/public/assets/20off/shirt.avif",
+      image: "/assets/20off/shirt.avif",
       title: "Eden Mens oversize T Shirt ",
       shop: "Nika Store",
       expired_date: "2025-05-29",
@@ -115,7 +115,7 @@ export default function getAllProduct() {
     {
       id: 12,
       type:"20off",
-      image: "/public/assets/20off/IUNIK_Centella_Calming_Daily_Screen.jpg",
+      image: "/assets/20off/IUNIK_Centella_Calming_Daily_Screen.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Bare Grow",
       expired_date: "2025-05-29",
@@ -125,7 +125,7 @@ export default function getAllProduct() {
     {
       id: 13,
       type:"20off",
-      image: "/public/assets/20off/Macbook_Air_M2.jpg",
+      image: "/assets/20off/Macbook_Air_M2.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Electronic Store",
       expired_date: "2025-05-29",
@@ -135,7 +135,7 @@ export default function getAllProduct() {
     {
       id: 14,
       type:"20off",
-      image: "/public/assets/20off/i-watch.jpg",
+      image: "/assets/20off/i-watch.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Electronic Store",
       expired_date: "2025-05-29",
@@ -145,7 +145,7 @@ export default function getAllProduct() {
     {
       id: 15,
       type:"20off",
-      image: "/public/assets/20off/T-shirt-1.jpg",
+      image: "/assets/20off/T-shirt-1.jpg",
       title: "Eden Mens oversize T Shirt ",
       shop: "Nika Store",
       expired_date: "2025-05-29",
@@ -155,7 +155,7 @@ export default function getAllProduct() {
     {
       id: 16,
       type:"20off",
-      image: "/public/assets/20off/set_oil_skin.webp",
+      image: "/assets/20off/set_oil_skin.webp",
       title: "Eden Mens oversize T Shirt ",
       shop: "Mora Skincare",
       expired_date: "2025-05-29",
@@ -165,7 +165,7 @@ export default function getAllProduct() {
     {
       id: 17,
       type:"One get One",
-      image: "/public/assets/one_get_one/markup.png",
+      image: "/assets/one_get_one/markup.png",
       title: "Eden Mens oversize T Shirt ",
       shop: "Mora Skincare",
       expired_date: "2025-05-29",
@@ -174,7 +174,7 @@ export default function getAllProduct() {
     {
       id: 18,
       type:"One get One",
-      image: "/public/assets/one_get_one/lipstick.png",
+      image: "/assets/one_get_one/lipstick.png",
       title: "Eden Mens oversize T Shirt ",
       shop: "Bare Grow",
       expired_date: "2025-05-29",
@@ -183,7 +183,7 @@ export default function getAllProduct() {
     {
       id: 19,
       type:"One get One",
-      image: "/public/assets/one_get_one/necklace.png",
+      image: "/assets/one_get_one/necklace.png",
       title: "Eden Mens oversize T Shirt ",
       shop: "Nika Store",
       expired_date: "2025-05-29",
