@@ -1,9 +1,12 @@
 import React from "react"
 import Caruosel from "../../caruosel/Caruosel"
+import DisCard from "../../cards/DisCard"
+import ClearCard from "../../cards/ClearCard"
+import One_get_one from "../../cards/One_get_one"
 export default function Homepage(){
   return(
     <>
-<section>
+<section className="mb-16">
     <form className="max-w-lg mx-auto">
       <div className="flex">
         {/* Dropdown Button */}
@@ -93,15 +96,39 @@ export default function Homepage(){
     </form>
     </section>
      {/* hero section */}
-    <section className="flex flex-row w-full h-full p-16 gap-5">
+    <section className=" flex flex-row w-full h-full p-16 gap-5">
           <Caruosel/>
         </section>
 
     {/* discount */}
-    <section>
-      <h2 className="mx-20 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Discount <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">off</span></h2>
-      
+    <section className="w-full pb-10 px-10 md:pb-16 md:px-16 lg:px-20 lg:pb-20">
+      <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Discount <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">off</span></h2>
+       {/* card */}
+       <div className="md:px-8 lg:p-0 gap-10">
+       <DisCard/>
+       </div>
     </section>
+    {/* clearance sale */}
+    <section className="w-full pb-10 px-10 md:pb-16 md:px-16 lg:px-20 lg:pb-20">
+      <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Clearance <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">Sale</span></h2>
+       {/* card */}
+       <div className="md:px-8 lg:p-0 gap-10">
+       <ClearCard/>
+       </div>
+    </section>
+
+   {/* buy 1 get 1 */}
+   <section className="w-full pb-10 px-10 md:pb-16 md:px-16 lg:px-20 lg:pb-20">
+      <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Buy one <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">Get one</span></h2>
+      <div >
+        <img className="w-[100%] h-[80vh] p-5 md:p-10" src="/src/assets/ad_img2.jpg" alt="banner b1g1" />
+      </div>
+       {/* card */}
+       <div className="md:px-8 my-5 lg:p-0 gap-10">
+       <One_get_one/>
+       </div>
+    </section>
+
   </>
   )
 }

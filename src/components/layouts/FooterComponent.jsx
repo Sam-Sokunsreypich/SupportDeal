@@ -17,13 +17,13 @@ export default function FooterComponent() {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Education</h2>
                   <ul className="text-gray-600 dark:text-gray-400 font-medium">
                       <li className="mb-4">
-                          <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
+                          <Link to="https://www.rupp.edu.kh/" className="hover:underline">RUPP</Link>
                       </li>
                       <li>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                          <Link to="https://www.fe.rupp.edu.kh/program/7" className="hover:underline">ITE</Link>
                       </li>
                   </ul>
               </div>
@@ -31,10 +31,10 @@ export default function FooterComponent() {
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                   <ul className="text-gray-600 dark:text-gray-400 font-medium">
                       <li className="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</a>
+                          <Link to="https://github.com/Sam-Sokunsreypich" className="hover:underline ">Github</Link>
                       </li>
                       <li>
-                          <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                          <a href="#" className="hover:underline">Discord</a>
                       </li>
                   </ul>
               </div>
@@ -53,7 +53,7 @@ export default function FooterComponent() {
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-600 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
+          <span className="text-sm text-gray-600 sm:text-center dark:text-gray-400">© 2023 <Link to="/" className="hover:underline">Support Deal</Link>. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a href="#" className="text-gray-600 hover:text-gray-900 dark:hover:text-white">

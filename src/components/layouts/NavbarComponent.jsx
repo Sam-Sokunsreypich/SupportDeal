@@ -1,28 +1,25 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-export function NavbarComponent(){
-  
-  
-    // State to manage the dropdown menu visibility
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-    // Function to toggle menu visibility
-    const toggleMenu = () => {
-      setIsMenuOpen(prevState => !prevState);
-    };
-    const location = useLocation();
 
-    const isActive = (path) => location.pathname === path;
-  
-    return(
-      
-        <>
-         
-         <nav className="bg-gradient-to-r from-orange-500 to-purple-500 font-englishFont  w-full mb-7 z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 px-5 md:px-10 lg:px-20">
+export function NavbarComponent() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
+
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+  return (
+    <nav className="bg-gradient-to-r mb-7 from-orange-500 to-purple-500 font-englishFont w-full fixed z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 px-5 md:px-10 lg:px-20">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="src/assets/logo.png" className="h-10 rounded-full" alt="support deal Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SupportDeal</span>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-gray-50">
+            SupportDeal
+          </span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-3">
           <div className="relative bg-white rounded-md">
@@ -41,82 +38,64 @@ export function NavbarComponent(){
             Login
           </button>
           </div>
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-sticky"
+          </div>
+        {/* Menu Button for Small Screens */}
+        <button
+          onClick={toggleMenu}
+          type="button"
+          className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-sticky"
+          aria-expanded={isMenuOpen}
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-            <li>
-              <Link
-                to="/"
-                className={`block py-2 px-3 rounded md:p-0 ${
-                  isActive('/') ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-blue-700 dark:hover:text-white'
-                }`}
-                aria-current={isActive('/') ? 'page' : undefined}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/aboutUs"
-                className={`block py-2 px-3 rounded md:p-0 ${
-                  isActive('/aboutUs') ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-blue-700 dark:hover:text-white'
-                }`}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/services"
-                className={`block py-2 px-3 rounded md:p-0 ${
-                  isActive('/services') ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
-                }`}
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className={`block py-2 px-3 rounded md:p-0 ${
-                  isActive('/contact') ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
-                }`}
-              >
-                Contact
-              </Link>
-            </li>
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex md:w-auto md:order-1">
+          <ul className="flex space-x-8 font-medium">
+            {["/shops", "/products", "/deal", "/aboutUs"].map((path) => (
+              <li key={path}>
+                <Link
+                  to={path}
+                  className={`block py-2 px-3 rounded md:p-0 ${
+                    isActive(path) ? "text-white bg-blue-700 md:bg-transparent md:text-blue-700" : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+                  }`}
+                >
+                  {path.replace("/", "").charAt(0).toUpperCase() + path.replace("/", "").slice(1)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Mobile Menu (Hidden by Default) */}
+        <div className={`absolute top-16 z-50 left-0 w-full bg-white shadow-md md:hidden transition-transform duration-300 ${isMenuOpen ? "block" : "hidden"}`}>
+          <ul className="flex flex-col p-4 space-y-4">
+            {["/shops", "/products", "/deal", "/aboutUs"].map((path) => (
+              <li key={path}>
+                <Link
+                  to={path}
+                  onClick={() => setIsMenuOpen(false)} // Close menu on click
+                  className={`block py-2 px-3 rounded ${
+                    isActive(path) ? "text-white bg-gradient-to-r from-orange-500 to-purple-500 " : "text-gray-900 hover:bg-gray-100"
+                  }`}
+                >
+                  {path.replace("/", "").charAt(0).toUpperCase() + path.replace("/", "").slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
     </nav>
-
-        </>
-    )
+  );
 }

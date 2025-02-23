@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import img1 from '/src/assets/img1.jpg';
 import img2 from '/src/assets/ad_img2.jpg';
-import img3 from '/src/assets/ad_img3.jpg';
 
-const images = ["https://www.kesarsweetsjaipur.com/cdn/shop/files/8_1.jpg?v=1729548122", img2, img3];
+
+const images = ["https://marketplace.canva.com/EAFfT9NH-JU/1/0/1600w/canva-gray-minimalist-fashion-big-sale-banner-TvkdMwoxWP8.jpg","https://img.freepik.com/free-vector/electronics-store-facebook-cover-template_23-2151168350.jpg","https://www.ajantabottle.com/blog/wp-content/uploads/2024/07/cosmetic-banner.png"];
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,11 +39,12 @@ export default function Carousel() {
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
-              src={image}
-              className="block w-full h-full object-cover"
-              alt={`Slide ${index + 1}`}
-            />
+            <img src={image}
+                  srcSet={`${image}?w=300 300w, ${image}?w=600 600w, ${image}?w=1200 1200w`}
+                  sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px"
+                  className="block w-full h-full object-cover"
+                  alt={`Slide ${index + 1}`}
+                />
           </div>
         ))}
       </div>
@@ -51,13 +52,13 @@ export default function Carousel() {
       {/* Controls */}
       <button
         onClick={handlePrev}
-        className="absolute top-1/2 left-0 z-30 px-4 -translate-y-1/2 bg-white/30 rounded-full hover:bg-white/50 focus:outline-none"
+        className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent text-5xl font-bold absolute top-1/2 left-0 z-30 px-4 -translate-y-1/2 bg-white/30 rounded-full hover:bg-white/50 focus:outline-none"
       >
         &#8249;
       </button>
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-0 z-30 px-4 -translate-y-1/2 bg-white/30 rounded-full hover:bg-white/50 focus:outline-none"
+        className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent text-5xl font-bold absolute top-1/2 right-0 z-30 px-4 -translate-y-1/2 bg-white/30 rounded-full hover:bg-white/50 focus:outline-none"
       >
         &#8250;
       </button>
