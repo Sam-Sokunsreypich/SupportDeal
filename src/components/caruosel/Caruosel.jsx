@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import img1 from '/assets/img1.jpg';
-import img2 from '/assets/ad_img2.jpg';
+import img1 from '/assets/clothes_banner.jpg';
+import img2 from '/assets/clothes_banner1.jpg';
 
 
-const images = ["https://marketplace.canva.com/EAFfT9NH-JU/1/0/1600w/canva-gray-minimalist-fashion-big-sale-banner-TvkdMwoxWP8.jpg","https://img.freepik.com/free-vector/electronics-store-facebook-cover-template_23-2151168350.jpg","https://www.ajantabottle.com/blog/wp-content/uploads/2024/07/cosmetic-banner.png"];
+const images = ["https://marketplace.canva.com/EAFfT9NH-JU/1/0/1600w/canva-gray-minimalist-fashion-big-sale-banner-TvkdMwoxWP8.jpg","https://i.pinimg.com/736x/90/43/8e/90438ef6208a7f01a80dbb9acd8ac624.jpg","https://i.pinimg.com/736x/fa/e4/c6/fae4c6a565497d7dd3900388abe7236b.jpg"];
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

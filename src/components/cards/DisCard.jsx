@@ -35,7 +35,7 @@ export default function DisCard() {
                 <img
                   src={`${card.image}`}
                   alt="Eden Mens Oversize T-Shirt"
-                  className="w-full h-52 object-cover"
+                  className="w-full h-60 object-cover"
                 />
                 <div className="absolute top-0 right-0 py-1 px-1.5 rounded-tr-2xl rounded-bl-2xl bg-gradient-to-r from-orange-500 to-purple-500 text-white text-sm  rounded">
                   <p>20%</p> <p> off</p>
