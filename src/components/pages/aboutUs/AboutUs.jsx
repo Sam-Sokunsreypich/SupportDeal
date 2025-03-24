@@ -62,7 +62,7 @@ export default function AboutUs() {
         <div>
           <h3 className='text-center text-2xl mb-5 font-bold bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent'>Advisor</h3>
           <div className='flex items-center justify-center gap-5'>
-          <img className='rounded-full w-64 h-64' src="" alt="" />
+          <img className='rounded-full w-64 h-64' src="./assets/profile/teacher.jpg" alt="" />
           <div >
           <h2 className='px-3 py-2 text-white bg-gradient-to-r from-orange-500 to-purple-500  rounded-tl-2xl rounded-br-2xl'>Chhim Bunchhun </h2>
           <p className='px-5 py-3'>Advisor</p>
@@ -72,10 +72,10 @@ export default function AboutUs() {
         </div>
        
        
-        <div className='mb-10'>
+        <div className='my-10'>
           <h3 className='text-center text-2xl mb-5 font-bold bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent'>Member</h3>
           <div className='flex items-center justify-center gap-5'>
-          <img className='rounded-full  w-64 h-64' src="./assets/profile/image.png" alt="" />
+          <img className='rounded-full  w-60 h-60' src="./assets/profile/image.png" alt="" />
           <div >
           <h2 className='px-3 py-2 text-white bg-gradient-to-r from-orange-500 to-purple-500  rounded-tl-2xl rounded-br-2xl'>Sam Sokunsreypich </h2>
           <p className='px-5 py-3'>Member</p>

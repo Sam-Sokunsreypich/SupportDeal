@@ -1,5 +1,5 @@
 export default function getAllProduct() {
-  let products = [
+  const products = [
     {
       id: 1,
       type:"clearence sale",
