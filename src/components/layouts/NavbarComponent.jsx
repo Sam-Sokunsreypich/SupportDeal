@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 export function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,6 +24,18 @@ export function NavbarComponent() {
           </span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-3">
+          <div className="relative bg-white rounded-md">
+            <Link to={"/cart"}>
+            <button className="p-1 " type="button">
+                                  <FontAwesomeIcon
+                                    icon={faCartShopping}
+                                    size="lg"
+                                    style={{ color: "#B197FC" }}
+                                  />
+                                </button>
+            </Link>
+          </div>
+          
           <div className="relative bg-white rounded-md">
           <button
             type="button"

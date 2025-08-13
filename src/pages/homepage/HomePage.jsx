@@ -1,9 +1,12 @@
 import React from "react"
-import Caruosel from "../../caruosel/Caruosel"
-import DisCard from "../../cards/DisCard"
-import ClearCard from "../../cards/ClearCard"
-import One_get_one from "../../cards/One_get_one"
+import Caruosel from "../../components/caruosel/Caruosel"
+import DisCard from "../../components/cards/DisCard"
+import ClearCard from "../../components/cards/ClearCard"
+import One_get_one from "../../components/cards/One_get_one"
+import { useGetProductQuery } from "../../features/auth/addProductApi"
 export default function Homepage(){
+
+ const { data: products = [], isLoading, error } = useGetProductQuery();
   return(
     <>
 <section className="mb-16">
@@ -96,7 +99,7 @@ export default function Homepage(){
     </form>
     </section>
      {/* hero section */}
-    <section className=" flex flex-row w-full h-full p-16 gap-5">
+    <section className=" flex flex-row w-full h-full py-8 px-16   gap-5">
           <Caruosel/>
         </section>
 
@@ -105,7 +108,8 @@ export default function Homepage(){
       <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Discount <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">off</span></h2>
        {/* card */}
        <div className="md:px-8 lg:p-0 gap-10">
-       <DisCard/>
+       <DisCard 
+       getAllProduct={products}/>
        </div>
     </section>
     {/* clearance sale */}
@@ -113,7 +117,8 @@ export default function Homepage(){
       <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Clearance <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">Sale</span></h2>
        {/* card */}
        <div className="md:px-8 lg:p-0 gap-10">
-       <ClearCard/>
+       <ClearCard 
+       getAllProduct={products}/>
        </div>
     </section>
 
@@ -121,11 +126,15 @@ export default function Homepage(){
    <section className="w-full pb-10 px-10 md:pb-16 md:px-16 lg:px-20 lg:pb-20">
       <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 dark:text-white">Buy one <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">Get one</span></h2>
       <div >
-        <img className="w-[100%] h-[80vh] p-5 md:p-10" src="/assets/ad_img2.jpg" alt="banner b1g1" />
+        {/* <img className="w-[100%] h-[80vh] p-5 md:p-10" src="/assets/ad_img2.jpg" alt="banner b1g1" /> */}
+        <img className=" p-5 md:p-10" src="https://i.pinimg.com/1200x/02/cf/cf/02cfcffac595c832c514d58704cd82ce.jpg" alt="banner b1g1" />
+      
       </div>
        {/* card */}
        <div className="md:px-8 my-5 lg:p-0 gap-10">
-       <One_get_one/>
+       <One_get_one
+       getAllProduct={products}
+       />
        </div>
     </section>
 

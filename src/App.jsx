@@ -1,9 +1,7 @@
 import "./App.css";
-import Homepage from "./components/pages/homepage/HomePage";
+import Homepage from "./pages/homepage/HomePage";
 
 function App() {
-
-  
   return (
     <>
       {/* <Metadata

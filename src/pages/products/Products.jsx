@@ -1,49 +1,65 @@
-import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
-import getAllProduct from "../data/products";
+import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
+import { useGetProductQuery } from "../../features/auth/addProductApi.js";
 import { useDispatch } from "react-redux";
-import { toast, ToastContainer } from "react-toastify";
-import { addToCart } from "../../features/api/cartSlice";
+import { addToCart } from "../../features/api/cartSlice.js";
+import { useState } from "react";
+import ProductSkeleton from "../../components/skeleton/ProductSkeleton.jsx";
 
-export default function DisCard({getAllProduct}) {
-  // const disCard = [
-  // {id: 1, image:"/assets/20off/Camera.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 2, image:"/assets/20off/chiken_burger.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 3, image:"/assets/20off/shirt.avif",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 4, image:"/assets/20off/IUNIK_Centella_Calming_Daily_Screen.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 5, image:"/assets/20off/Macbook_Air_M2.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 6, image:"/assets/20off/i-watch.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 7, image:"/assets/20off/T-shirt-1.jpg",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"},
-  // {id: 8, image:"/assets/20off/set_oil_skin.webp",title:"Eden Mens oversize T Shirt ", shop:"Nika Store", expired_date:"2025-05-29", bePrice:"$20",afterPrice:"$16"}
+export default function Products() {
 
-  // ]
-
-   const dispatch = useDispatch();
-  
-    const handleAddToCart = (product) =>{
-      dispatch(addToCart(product))
-      console.log('product', product)
-    }
-    
-    const showToastMessage = () => {
-      toast.success("Add to Cart Successfully !");
-    }
-
-const base_url = import.meta.env.VITE_BASE_URL;
-
-  const dis_20_off = getAllProduct.filter(
-    (product) => product.discount != 0 && product.discount != 70
+  const { data: products = [], isLoading, error } = useGetProductQuery();
+  console.log('products', products)
+if (isLoading || products.length === 0) {
+  return (
+    <div className="mt-28 grid grid-cols-4 gap-5 mx-16">
+      {[...Array(5)].map((_, i) => (
+            <ProductSkeleton key={i} />
+          ))}
+    </div>
   );
+}
+  const base_url = import.meta.env.VITE_BASE_URL;
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product) =>{
+    dispatch(addToCart(product))
+    console.log('product', product)
+  }
+  
+  const showToastMessage = () => {
+    toast.success("Add to Cart Successfully !");
+  }
+
+ 
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Something went wrong!</p>;
+  
+  
+
+
   return (
     <>
-      <div className=" grid gap-3 lg:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-        {dis_20_off.map((card) => (
-          <div
+    
+      <div className="mt-28">
+        <h2 className="px-16 my-10 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold flex justify-center bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent ">
+          All Products
+        </h2>
+      </div>
+    
+      <div className="pb-10 px-10 md:pb-16 md:px-16 lg:px-20 lg:pb-20 grid gap-3 lg:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+       {
+        products.map((card) => (
+          
+            <div
               key={card.id}
               className="max-w-xs bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200"
             >
@@ -106,12 +122,22 @@ const base_url = import.meta.env.VITE_BASE_URL;
                 <div className="flex justify-between items-center mt-4">
                   <Link to={`/product/${card.id}`} key={card.id}>
                     <div>
-                    <span className="text-gray-500 line-through mr-2 relative top-1">
+                   {
+                    card.after_dis_price < card.price ? ( 
+                      <>
+                        <span className="text-gray-500 line-through mr-2 relative top-1">
+                          {card.price}
+                        </span>
+                        <span className="text-lg font-bold bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent ">
+                          {card.after_dis_price}
+                        </span>
+                        </>
+                      ):(
+                  <span className="text-lg font-bold bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent ">
                       {card.price}
                     </span>
-                    <span className="text-lg font-bold bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent ">
-                      {card.after_dis_price}
-                    </span>
+                    )
+                   }
                     </div>
 
                   </Link>
@@ -151,8 +177,10 @@ const base_url = import.meta.env.VITE_BASE_URL;
               </div>
               
             </div>
+          
         ))}
       </div>
+      
     </>
   );
 }

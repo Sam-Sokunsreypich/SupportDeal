@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAllShops } from '../../data/shop'
+import { getAllShops } from '../../components/data/shop'
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
